@@ -18,8 +18,8 @@
 
 
 
-#define SERV_UDP_PORT 61123 //REPLACE WITH YOUR PORT NUMBER
-#define SERV_HOST_ADDR "10.158.82.32" //REPLACE WITH SERVER IP ADDRESS
+#define SERV_UDP_PORT 51531 //REPLACE WITH YOUR PORT NUMBER
+#define SERV_HOST_ADDR "10.158.82.129" //REPLACE WITH SERVER IP ADDRESS
 
 
 /* A pointer to the name of this program for error reporting.      */
@@ -38,7 +38,7 @@ char *progname;
 /* in servlen, so that the function works with other protocol      */
 /* families that have different address sizes.                     */
 
-dg_cli(sockfd, pserv_addr, servlen)
+int dg_cli(sockfd, pserv_addr, servlen)
 int             sockfd;
 struct sockaddr *pserv_addr;
 int servlen;
@@ -98,7 +98,7 @@ int servlen;
 /* and the server's address and port (well-known numbers) before   */
 /* calling the dg_cli main loop.                                   */
 
-main(argc, argv)
+int main(argc, argv)
 int     argc;
 char    *argv[];
 {
