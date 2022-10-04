@@ -11,7 +11,7 @@
 #include <signal.h>         // for the signal handler registration.
 #include <unistd.h>
 
-#define SERV_UDP_PORT   61123 // REPLACE WITH YOUR PORT NUMBER
+#define SERV_UDP_PORT   51531 // REPLACE WITH YOUR PORT NUMBER
 
 
 char *progname;
@@ -23,7 +23,7 @@ char *progname;
 /* The dg_echo function receives data from the already initialized */
 /* socket sockfd and returns them to the sender.                   */
 
-dg_echo(sockfd)
+int dg_echo(sockfd)
 int            sockfd;
 {
 /* struct sockaddr is a general purpose data structure that holds  */
@@ -89,7 +89,7 @@ int            sockfd;
 /* Main driver program. Initializes server's socket and calls the  */
 /* dg_echo function that never terminates.                         */
 
-main(argc, argv)
+int main(argc, argv)
 int     argc;
 char    *argv[];
 {
