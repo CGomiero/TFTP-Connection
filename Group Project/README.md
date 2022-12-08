@@ -2,7 +2,7 @@ Step-By-Step Instruction to sucessfully run the Server and the Client.
 1. If you are connecting on two different machines which have different IP address
     1. Open the tftp.h file present in the common folder
     2. Change the "SERV_HOST_ADDR" value to your server IP address
-    3. Go back to the main folder where the "Client", "Server", "Common" and makefile files are present
+    3. Go back to the main folder where the "client", "server", "common" and makefile files are present
     4. Run "make" in the linux command line for both the client and server machines
     5. Access the client folder on the client machine and the server folder on the server machine
     6. On the server, run "./server" and you can add "-p Port#" if you want the server to listen on a specific port number
